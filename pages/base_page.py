@@ -1,22 +1,22 @@
+
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 class BasePage():
-
     def __init__(self, driver):
         self.driver = driver
 
-    def get_element(self, locator):
-        expected_conditions - ec.presence_of_element_located(locator)
-        return WebDriverWait(self.driver, 10).until(expected_conditions, message="unable to locate element")
+    def enter_username(self, username):
+        self.driver.find_element_by_name("username").clear()
+        self.driver.find_element_by_name("username").send_keys(username)
 
+    def enter_password(self, password):
+        self.driver.find_element_by_name("password").clear()
+        self.driver.find_element_by_name("password").send_keys(password)
 
-
-
-
-
-    def login(self):
+    def click_login(self):
         self.driver.find_element_by_xpath("//button[@type='submit']").click()
-        WebDriverWait(self.driver)
+        self.driver.find_element_by_name("password").send_keys(password)
+        WebDriverWait(self.driver, 10).until(ec.element_to_be_clickable).click()
 
 

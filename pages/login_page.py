@@ -1,18 +1,19 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.base_page import BasePage
 
-class LoginPage():
-
-    def __init__(self, driver):
-        self.driver = driver
+class LoginPage(BasePage):
+    FIELD_USERNAME = (By.NAME, "username")
+    FIELD_PASSWORD = (By.NAME, "password")
+    BUTTON_LOGIN = (By.XPATH, "//button[@type='submit']")
 
     def enter_username(self, username):
-        self.driver.find_element_by_name("username").clear()
-        self.driver.find_element_by_name("username").send.keys(username)
+        self.type_in(self.FIELD_USERNAME, username)
 
     def enter_password(self, password):
+        self.type_in(self)
         self.driver.find_element_by_name("password").clear()
         self.driver.find_element_by_name("password").send.keys(password)
 
