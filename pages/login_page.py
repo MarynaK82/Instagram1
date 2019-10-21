@@ -9,6 +9,7 @@ class LoginPage(BasePage):
     FIELD_PASSWORD = (By.NAME, "password")
     BUTTON_LOGIN = (By.XPATH, "//button[@type='submit']")
 
+# test
     def enter_username(self, username):
         self.type_in(self.FIELD_USERNAME, username)
 
