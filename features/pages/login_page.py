@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.wait import WebDriverWait
 
-from pages.base_page import BasePage
+from features.pages.base_page import BasePage
 
 class LoginPage(BasePage):
     FIELD_USERNAME = (By.NAME, "username")

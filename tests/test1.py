@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-from pages.login_page import LoginPage
+from features.pages.login_page import LoginPage
 
 
 driver = webdriver.Chrome("/Users/marynakaminska/Downloads/chromedriver")
